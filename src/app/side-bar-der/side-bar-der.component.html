@@ -1,0 +1,36 @@
+<aside class="side-bar2">
+  <div class="estudiante">
+    <div class="row">
+      <div style="padding-left: 30px; padding-right: 0" class="col-6">
+        <img
+          class="logoUser"
+          src="../assets/136-1366211_group-of-10-guys-login-user-icon-png.png"
+        />
+      </div>
+      <div
+        style="padding-left: 0; padding-right: 0; padding-top: 20px"
+        class="col-6"
+      >
+        <a> <b style="font-size: 20px"> {{this.usuarioService.usuario[0].nombre}} </b></a>
+        <a *ngIf="this.usuarioService.usuario[0].rol==='1'"> Administrador</a>
+        <a *ngIf="this.usuarioService.usuario[0].rol==='2'"> Estudiante</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="infoEstudiante">
+    <br /><a> <b style="font-size: 20px">Datos Estudiante</b></a> <br />
+    <a> Correo: {{this.usuarioService.usuario[0].correo}} </a> <br />
+    <a>Rut: {{this.usuarioService.usuario[0].rut}}</a> <br />
+    <a> Carrera: {{this.usuarioService.usuario[0].carrera}}</a>
+    <br>
+    <button type="submit" class="btn btn-danger" (click)="this.loginService.logout()" style="margin-top: 30px; color: white; background-color: #c44a4c;
+    border-radius: 20px; padding-left: 15px; padding-right: 15px; margin-left: 65px;">Cerrar Sesión</button>
+  </div>
+  <div class="plataformas">
+    <a> <b style="font-size: 20px; margin-top: 20px;">Plataformas </b></a> <br /><br>
+    <button type="button" class="btnPlataformas btn" routerLink="/intranet">Intranet</button>
+    <button type="button" class="btnPlataformas btn" routerLink="/moodle">Moodle</button> <br />
+    <button type="button" class="btnPlataformas btn" routerLink="/adecca">Adecca</button>
+  </div>
+</aside>

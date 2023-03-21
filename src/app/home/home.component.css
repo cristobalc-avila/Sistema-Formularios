@@ -1,0 +1,167 @@
+.container {
+    margin-left: 300px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+  
+    "side-bar main side-bar2"
+    "side-bar main side-bar2"
+    "side-bar main side-bar2"
+    "side-bar main side-bar2"
+    "footer footer footer";
+  
+    grid-template-columns: 300px 900px 300px;
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+  }
+  @media screen and (max-width: 660px) {
+    .container{
+      grid-template-areas:
+      "header"
+      "main"
+      "main"
+      "side-bar"
+      "footer";
+    }
+  }
+  .nav {
+    background-color: #4a78c4;
+    height: 60px;
+  }
+  .main-encuestas {
+    background-color:#ffffff;
+    margin-top: 30px;
+    margin-left: 62px;
+    margin-right: 62px;
+    height: 85vh;
+    grid-area: main;
+     overflow-y: scroll; 
+     overflow-x: hidden; 
+  }
+
+
+  .encuestasTitulo {
+    padding-bottom: 25px;
+  }
+
+  .encuesta{
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    border: solid gray;
+    margin-bottom: 20px;
+    padding-left: 30px;
+  }
+  .date {
+    font-size: 20px;
+  }
+  .departamentoEncuesta{
+    text-align:  initial;
+    padding-left: 30px;
+  font-size: 30px;
+  padding-bottom: 20px;
+  }
+  .botones {
+   text-align: end;
+    padding-right: 40px;
+  }
+  .btnAceptar{
+  background-color:#4879c4;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+  }
+  .btnCancelar{
+  color: white;
+  background-color: #c44a4c;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  }
+  .side-bar {
+    background-color: #eaf2ff;
+    grid-area: side-bar;
+  }
+  .mainCrear {
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+  .logoUbb {
+    padding-left: 12%;
+    height: 180px;
+  }
+  .footer {
+    background-color:#4a78c4;
+    grid-area: footer;
+    z-index: 1;
+  }
+  .side-bar2 {
+    background-color:#eaf2ff;
+    grid-area: side-bar2;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .logoUser{
+    width: 80px;
+  }
+  .estudiante{
+   padding-right: 10px;
+    padding-top: 20px;
+    margin-right: 21px;
+  }
+  .plataformas {
+    margin-top: 450px;
+    padding-left: 70px;
+    padding-right: 65px;
+    text-align: center;
+  }
+  .btnPlataformas{
+    background-color:#4879c4;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+  }
+  #body-row {
+    margin-left:0;
+    margin-right:0;
+  }
+  .sidebar-expanded {
+    width: 300px;
+  }
+  #sidebar-container .list-group a {
+    height: 50px;
+    color: white;
+  }
+  #sidebar-container .list-group .sidebar-submenu a {
+    height: 45px;
+    padding-left: 30px;
+  }
+  .sidebar-submenu {
+    font-size: 0.9rem;
+  }
+  .list-group-item {
+    border: 0;
+  }
+  #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+  }
+  #sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+  }
+  

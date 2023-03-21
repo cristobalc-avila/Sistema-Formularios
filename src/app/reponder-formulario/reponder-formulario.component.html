@@ -1,0 +1,34 @@
+<div class="container">
+  <app-side-bar-izq></app-side-bar-izq>
+  <!-- <header class="header"> Header </header> -->
+  <!-- SIDE BAR IZQUIERDO-->
+
+  <main class="main-content">
+    <div class="contenidoCentrado">
+
+      <h1 style="margin-top:30px">{{this.formularioService.formulario[0].titulo}}</h1>
+      <p>
+        {{this.formularioService.formulario[0].descripcion}}
+      </p>
+
+      <iframe [src]="this.formularioService.formulario[0].url | safe" width="100%" height="650vh" frameborder="0" marginheight="0"
+      marginwidth="0">Cargando. . .</iframe>
+
+      <p>
+        Una vez hayas Enviado tus respuestas en el formulario, presiona el botón "Ya he respondido"
+      </p>
+
+      <div>
+        <button type="button" class="btn btnAceptar" routerLink="/home" (click)="respoder()"> Ya he respondido</button>
+        <button type="button" class="btn btnCancelar" routerLink="/home"> Volver</button>
+      </div>
+
+
+    </div>
+  </main>
+
+  <!-- SIDE BAR DERECHO -->
+  <app-side-bar-der></app-side-bar-der>
+  <!-- FOOTER -->
+  <footer class="footer"></footer>
+</div>

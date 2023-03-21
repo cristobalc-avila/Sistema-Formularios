@@ -1,0 +1,28 @@
+<div class="container">
+    <!-- <header class="header"> Header </header> -->
+
+    <!--
+        SIDE BAR IZQUIERDO
+      -->
+      <app-sidebar-izq-admin></app-sidebar-izq-admin>
+
+    <main class="main-content">
+      <div class="nav"></div>
+      <div class="main-encuestas">
+        <h1 class="encuestasTitulo"><b>Estadísticas</b></h1>
+        <br>
+        <h2>Encuestas Disponibles: {{this.adminService.encuesta.length}}</h2>
+        <h2>Actividades Disponibles: {{this.adminService.actividad.length}} </h2>
+        <h2>Formularios Contestados: {{this.adminService.respuesta.length}}</h2>
+      </div>
+    </main>
+    <!--
+        SIDE BAR DERECHO
+      -->
+    <app-side-bar-der></app-side-bar-der>
+    <!--
+        FOOTER
+       -->
+    <footer class="footer"></footer>
+  </div>
+

@@ -1,0 +1,75 @@
+<div class="container">
+    <!-- <header class="header"> Header </header> -->
+  
+    <!--
+      SIDE BAR IZQUIERDO
+    -->
+    <app-side-bar-izq></app-side-bar-izq>
+  
+    <main class="main-content">
+      <div class="nav"></div>
+      <div class="main-encuestas">
+        <h1 class="encuestasTitulo"><b>Editar Encuesta</b></h1>
+        <div class="encuestas">
+          <div class="crear-encuesta">
+            <div class="row">
+              <div style="padding-bottom: 20px; font-size: x-large">
+                A continuación, debe editar los datos e información
+                que desee cambiar de su encuesta.
+              </div>
+              <form [formGroup]="formFormulario" id="formulario" (ngSubmit)="EditarData()" (ngSubmit)="formFormulario.reset" novalidate>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Titulo</label>
+                  <div class="col-sm-10">
+                    <input formControlName="titulo" type="text" class="form-control"  placeholder={{this.formularioService.formulario[0].Titulo}}>
+                    <div *ngIf="formFormulario.get('titulo')?.errors &&(formFormulario.get('titulo')?.touched
+                        || formFormulario.get('titulo')?.dirty)"
+                        class="alert alert-danger">El Titulo del Formulario es obligatorio.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Tipo</label>
+                  <div class="col-sm-10">
+                    <input formControlName="tipo" type="text" class="form-control" placeholder={{this.formularioService.formulario[0].Tipo}}>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Descripcion</label>
+                  <div class="col-sm-10">
+                    <textarea formControlName="descripcion" class="form-control" rows="3" cols="40" placeholder={{this.formularioService.formulario[0].Descripcion}}></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Url</label>
+                  <div class="col-sm-10">
+                    <input formControlName="url" type="url" class="form-control" placeholder="Url">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Fecha de Vencimiento</label>
+                  <div class="col-sm-3">
+                    <input formControlName="fechavencimiento" type="date" class="form-control">
+                  </div>
+                </div>
+                <div style="padding-left: 330px;" class ="botones">
+                  <button type="submit" [disabled]="!formFormulario.valid" style="margin-right: 10px;" class="btnAceptar btn">Editar Formulario</button>
+                  <button type="button" class="btn btnCancelar">Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <app-modal-add></app-modal-add>
+      </div>
+    </main>
+    <!--
+      SIDE BAR DERECHO
+    -->
+    <app-side-bar-der></app-side-bar-der>
+    <!--
+      FOOTER
+     -->
+    <footer class="footer"></footer>
+  </div>
+  
